@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IoBrowsersOutline, IoCalculatorOutline } from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculatorOutline, IoFootballOutline } from "react-icons/io5";
 import { SidebarMenuItem } from "./sidebar-menu-item";
 
 const menuItems = [
@@ -15,11 +15,17 @@ const menuItems = [
     title: 'Counter',
     subtitle: 'Local State',
   },
+  {
+    path: '/dashboard/pokemons',
+    icon: <IoFootballOutline size={32} />,
+    title: 'Pokemons',
+    subtitle: 'Static Generation',
+  },
 ]
 
 export const SideBar = () => {
   return (
-    <div id="menu" className="bg-gray-900 min-h-screen z-10 text-slate-300 w-[400px] left-0 h-screen overflow-y-scroll">
+    <div id="menu" className="bg-gray-900 min-h-screen z-10 text-slate-300 w-[400px] left-0 overflow-y-scroll">
       <div id="logo" className="my-4 px-6">
         <h1 className="text-lg md:text-2xl font-bold text-white">Dash<span className="text-blue-500">8</span>.</h1>
         <p className="text-slate-500 text-sm">Manage your actions and activities</p>
