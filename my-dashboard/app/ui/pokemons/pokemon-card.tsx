@@ -22,7 +22,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
       />
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center capitalize">{name}</h5>
-        <Link href={`pokemon/${id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <Link href={`pokemon/name/${name}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
           Read more
           <IoArrowForwardOutline className="rtl:rotate-180 w-3.5 h-3.5 ms-2" />
         </Link>
