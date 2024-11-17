@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { PokemonGrid } from "@/app/ui";
+import { FavoritesPokemons } from "@/app/ui";
 
 export const metadata: Metadata = {
   title: 'Favorites',
@@ -13,7 +13,7 @@ export default async function FavoritePage() {
         <h1 className="text-4xl my-2">Favorites Pokemons</h1>
         <span className="bg-blue-800 text-blue-200 text-xs font-medium me-2 px-2.5 py-0.5 rounded h-5">Global State</span>
       </div>
-      <PokemonGrid pokemons={[]} />
+      <FavoritesPokemons />
     </div>
   );
 }
