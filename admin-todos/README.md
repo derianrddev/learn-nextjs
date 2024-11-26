@@ -12,9 +12,9 @@
   npm install
 ```
 3. Start the database:
-   ```bash
-    docker compose up -d
-   ```
+ ```bash
+  docker compose up -d
+ ```
 4. Rename `.env.template` to `.env`.
 5. Replace the environment variables in the `.env` file with the appropriate values.
 6. Run development server:
