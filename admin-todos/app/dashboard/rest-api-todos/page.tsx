@@ -5,11 +5,11 @@ export default async function RestApiTodosPage() {
   const todos = await prisma.todo.findMany({ orderBy: { description: 'asc' } });
 
   return (
-    <div>
+    <>
       <div className="w-full pl-10 mb-5">
         <NewTodo />
       </div>
       <TodosGrid todos={todos} />
-    </div>
+    </>
   );
 }

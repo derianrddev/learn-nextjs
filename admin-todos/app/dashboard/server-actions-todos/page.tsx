@@ -1,8 +1,15 @@
+import prisma from "@/app/lib/prisma";
+import { NewTodo, TodosGrid } from "@/components/todos";
 
-export default function ServerActionTodosPage() {
+export default async function ServerActionTodosPage() {
+  const todos = await prisma.todo.findMany({ orderBy: { description: 'asc' } });
+
   return (
-    <div>
-      <h1>Page Server Action TODOs</h1>
-    </div>
+    <>
+      <div className="w-full pl-10 mb-5">
+        <NewTodo />
+      </div>
+      <TodosGrid todos={todos} />
+    </>
   );
 }
