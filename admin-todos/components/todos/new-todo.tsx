@@ -1,14 +1,14 @@
 'use client';
 
 import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { IoTrashOutline } from "react-icons/io5";
 
-import * as api from "@/helpers/todos";
-import { createTodo } from "@/actions/todo-actions";
+// import * as api from "@/helpers/todos";
+import { createTodo, deleteCompleted } from "@/actions/todo-actions";
 
 export const NewTodo = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [description, setDescription] = useState('');
 
   const onSubmit = async (event: FormEvent) => {
@@ -24,11 +24,11 @@ export const NewTodo = () => {
     setDescription('');
   }
 
-  const deleteCompleted = async () => {
+  /* const deleteCompleted = async () => {
     await api.deleteCompletedTodos();
 
     router.refresh();
-  }
+  } */
 
   return (
     <form onSubmit={onSubmit} className='flex w-full'>
